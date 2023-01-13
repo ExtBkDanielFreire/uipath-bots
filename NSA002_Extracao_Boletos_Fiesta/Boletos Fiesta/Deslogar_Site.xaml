@@ -1,0 +1,132 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Deslogar_Site" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,1259" sap2010:WorkflowViewState.IdRef="Deslogar_Site_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Deslogar_Site" sap:VirtualizedContainerService.HintSize="558,1194" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Deslogar chrome" sap:VirtualizedContainerService.HintSize="496,1072" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="http://gisweb.shoppingfiesta.com.br/Fiesta/recibo/recibo" Name="strUrlDeslogar" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Pegar sessão aberta" sap:VirtualizedContainerService.HintSize="434,950" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Deslogar" sap:VirtualizedContainerService.HintSize="400,724" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://gisweb.shoppingfiesta.com.br/Fiesta/recibo/recibo" DesignTimeRectangle="1871, 140, 18, 14" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;span&amp;gt;span&amp;gt;i' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='I' class='icon-caret-down' aaname='' /&gt;" Guid="1488e8a8-bc93-46ce-bf6f-169f869501c3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEdSURBVDhPtZI9TsNAFITfKZDgNgjKnIIGahSgByIZBDRIkYA0KHb8b8fOxix/Zxve4theJQsUXopPM2PPm2pJyk9I+cHYVXqp3vEfUFW9oWWp+Z6ZhHiFEJKxqyQWEgvGtlJZVmgpNN8zU8GhY9n6yeQZo5FjxHFuEASJdrd5T/NcIGfW9eDsHlu7QyM7+6e4HXvGu0YpzxdsVmSd98M5BkfXG6PbeycYXj4hU12tv35PaVriJzw/x+CwG1ejxxePSBJzX4eHC6QJw5qsVM+en/H4VT16/lB3fuk3meI4x19MvQR34ymiyPzfBKlyFGXfRzaVwjDlp5PCtpJ6jzXqQ+P7Z5rNYnREmu+XeTiC56kPdpVcN4TrBoxNDfAF9PCbUng9JzQAAAAASUVORK5CYII=" InformativeScreenshot="db06d8c577dae4110e8effc590d2aef3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recibo - Shopping Fiesta' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1771, 133, 32, 32" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='POPEYES' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='POPEYES' tag='IMG' type='' class='menu-avatar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARISURBVFhHxZfrTxpZGIfP/1fbpNmvTfaDd1FcLqJVwYH1EhAECkpZpVAUFboSqBdK5bJUE43Ga9R/593zm3S2U/IiQ7fufnhCBt55fw8zZ845I+q1I6pVv1C12qDDz3X6XK5S+ZNE+9R4gmNkIbNaaVCt9oXgInCAH3c/lmhnp0C57A5tbX2grc0PtLmZ+/r584+3ZUY2+yfld4r0UWZDrlL5i8SnUkX98vCwSnd3d/Tw8PCfgkxkw6EkXUSxsE/v3qX/FxkNZMMBLiKXzVMwGGELW3F1dUW7u7sUj8dpfn6e5ubmVJaWluRtyNLx8TF73mOEpENWDheRyWRpYd7LFnEcHR2R1Wql3t5e6unpYenr61NlufNbAQe4iHQ6Qx73LFvUzMbGBvX397MSHG63m05PT9lezXg8s5R+nyGRSmVIUTxskZ58Pk/d3d1s8GN4PB5D41NRfqdUakMKJddpxuVmizTOzs7U28QFGiGVSrF99cABLiKZTJPLpbBFGrlcjg0yis1mo4uLC7a3BhyS8kkTicR7cjpn2CKNsbExNsgoGOS1Wo3treF0KpRIpKTQWoqmp1sLnZ+f/9DYaSaZTLL9NZzSYU26iNXVJE1NudgisL+/zwZ0it/vZ/trwAEubYUKhQIb0CmYQLn+Gv8I/RFP0OSkky0CxWKRDeiUhYUFtr8GHOLSRcTja/Jgmi0ClUqFDeiUcDjM9teAQ/ztGolYbJUmJqbYInB7e8sGdMr29jbbXwMOcGkrBDDbciFGGRgYoEajwfbWgMPKihRaXo7T+PgkW6SBf8cFGcVut7edGOEAF1XI4XjNFmmcnJyQ2Wxmw4wQjUbZvnocDgi9JRGNxuRMPMEWaWBxxH6HC2vH4OCg+oe4vnocjgmKRGIkIpGVtkIATbnAdhjdF8EBLiIcXpb3eJwtagbT/2Mbs2awQzC6H4IDXFQhm83BFjVzfX1teKHFRq7dgqrHbndQKCSFQqGoFBpjiziw2BqRMrIH0oOLEgpFSGCDb7UaFwKYdTkJPdVqlT23FXCAiwgshclisbNFrcDbBSehp16vs+e2Ag6BQFgKBULywMYWNYPHv1wuk8lkYiX0JBKJjt714AAXsbgYotHR9kKlUkluM12G3zqwS8RThve0+/t7tqee0d9sBBcpFJRCVrYIL4Tr6+tynZlgQ42CKxqJRNRx1UoODj7pIny+gDywfPcjTtrb21P/JRfwb/D5fOr0oc8DcICL8Hoh9O0KYTAqitLRBNgpWBcxxrC1+SZkJbioVwgjHLfn4OCAhoaG2CZPAfbZl5eXdHNzozp4cYX8/pC69Hu9fkNPz8/G5ZqRq3xMOkxJQTmGgsGofAefoxGzhV69+pVevvyFurpe0LNnzyVdXz9b8eO/dz1/oWYhc2TEojrARbyRS/6iNFPcs+QYf63ey+HhUTINm2nI9DSgNzKQhUxkw+FNJEZ/AxSVWEr9i/rlAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Sair'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://gisweb.shoppingfiesta.com.br/Fiesta/recibo/recibo" DesignTimeRectangle="1788, 395, 22, 17" ElementType="Text" FriendlyName="'Sair'" FullSelectorArgument="&lt;webctrl aaname='Sair' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sair' tag='SPAN' type='' class='' check:innerText='Sair' /&gt;" Guid="e38eb635-2d2d-47bf-8b2c-bf8f396038e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAVCAYAAABYHP4bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGkSURBVEhL3ZI9SwNBEIbz7/wFFtaK/oB0GrQ0NmpipYmFmjQKIgoqomATxBDjZ0AMIQmxNJ96l+PyMd47MMvtcbHyVDx4mJ2d2Z195yZkmib9BP+0kGEY7ARp/4Yi4TvimqK9w1Mam5hRLK9vaQf8KFdrjF/MjVKUyd7w5bn7AuErVWr09FzkJMQFr7+a2KG5xRjVG03fuPhK0f7xOU2FF+it3mS/1+sxEh/FcDhkLMvyjQtKUbFcpfHpsHqd7MOKWm9LEcda/F2n9VjDIg9W8pQivB7tQjEkzToFG80Wxz4MkxqtNrcUFsoz2TzH4sk0gzW6grOxZIpzB4MB74MQqgm2bXOCFFzZ2Ob9q9ydUiNc5x84hksB1tJ++V9utKkToO7g5IIiS2vORL3SZHiefXyiKHv7yLleRTjT7rxr9wGl6OjskgrOlGGNF0Wicb7gpVRhdbgYMVE3ShEKtdod9t1oU+duDQ6Y3a5SJ/uxRIrim+kvFaGQ3CsoRf1+n1sjn4ysN4YfDPAAxMSXPPc5N2q8g7ba1AWJpkgIwv8dRcFZgz4BTEnconjxF1EAAAAASUVORK5CYII=" InformativeScreenshot="b9ffa00117b1bf31dd5a17b51131a6e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Recibo - Shopping Fiesta' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1767, 396, 18, 14" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;i' idx='2' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='icon-off' tag='I' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGpSURBVDhPtVOJboJAEO3/f1O9a7Ucam3Q2kTrrVALcqOC052lS4HFtomR5GWB2Xnz9s3sned5cAvcjth1Xfry26ppn1BrdECUFbBt+8/9uP5L8XKpQrkqwWOrD6ZpFe7Jg1PMMF9soFqXQZSUH+J2H9YbjapvP72AYew5pQyFilV1B3WSfF8WQO4MM8TbLYk9dGlMlAfEGofLR2QUMyAZSwyCA6zWWkLsOC7ohkULlyoijCcLLp8SswoMu51Oj1qpSaRpOiEOMsSWZcPxeITh63tSPM+B4Dxmx262nskxYwW6btLjy91hkpgUIw3d760k/6JiloDEJlGH/w6HA5zPZ4iiCHzfj/etsqdIcyCo4jQMg6j7tgKL5OMMymBMrZBIP9CufJxTjOq6vRFNEsioFanZqh+0D9i82XzDxRGcYvzJPEXyRrNHZ9pxHHo5Rm9TOt8Yw+nBqclzIArnGLu+VeNrjARFEESFEPiJ53lwihmQ3PMC4uWEKIwLlCoCbep0toYwjAq9ZeDGLb2i32EYQvrB6TidTnTPpTxcLyq+FonH+MHer//24AvQANS7B8QzGgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Finalizando robô&quot;]" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, 218, 1382, 736" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="7debef6730606d291676fb0a72275ecb.png" Selector="&lt;html app='chrome.exe' url='http://gisweb.shoppingfiesta.com.br/Fiesta/Usuario/Login?ReturnUrl=%2FFiesta%2Frecibo%2Frecibo' /&gt;" Url="[strUrlDeslogar]" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

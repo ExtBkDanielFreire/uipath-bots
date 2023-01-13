@@ -1,0 +1,237 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Fiesta" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strUsuario" Type="InOutArgument(x:String)" />
+    <x:Property Name="strSenha" Type="InOutArgument(ss:SecureString)" />
+    <x:Property Name="strUrlIntranet" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>986,2410</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPathTeam.ServiceNow</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_Fiesta" sap:VirtualizedContainerService.HintSize="996,2345" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="934,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando login Shopping SP Market&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="934,2067" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="896,1830" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <Sequence DisplayName="Ação" sap:VirtualizedContainerService.HintSize="496,1195" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Intranet Mall" sap:VirtualizedContainerService.HintSize="434,1073" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Fazer Login" sap:VirtualizedContainerService.HintSize="400,847" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Text="[strUsuario]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.intranetmall.com/shoppingspmarket/" DesignTimeRectangle="822, 653, 276, 39" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='inputLogin' aaname='' /&gt;" Guid="6f406ccf-8739-4699-a73c-c8866d889412" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAArCAYAAACjF5c7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHNSURBVHhe7dmxbuJAFEDR/Q2EQMLbZAtqPoGCnoKKhoaGiu/36iHZGmYdJSA/FLwn0lHIzNjl1RvyazabtQAZBAZIIzBAGoEB0ggMkEZggDQCA6QRGCCNwABpBAZIIzBAGoEB0jwcmPgZWgeoCQyQRmCANAIDpBEYIM1TgTkcDu16vR7cf9Z+v78Z2gPe048JDDA9owdmu9221+v15nK53J1rmqY9n8/9fnkmngtxbrPZtLvdrj0ej/050w28n1EDE2GIKCyXy9vfEZTT6dSfjUjEmaG9OjBlnOJ98d7uWeA9jBqYMiDlWoQjIlE+V0ejDkw9sQy9G/jZRgvMZ1NGRCPiUO9/NcEIDLy/0SeYLhJDa/FMXH2671XKYAgMTM9Lv4MpI1ITGJiepwITEemmkHoaid9D62Hov0hdVAQGpuepwAytfyXiEHGJyHRr8TliVa4B0/GywMR0Uk8lcXWK61Z3pQKm5WWBCRGY8npUTzTAtLw0MMD/5eHAAHyXwABpBAZIIzBAGoEB0ggMkEZggDQCA6TpAzOfz//ZBHhE3ZE+MKvVql0sFnebAN8V/YiOlGt3V6TfTdP++fgAeFj0o+xJ8B0MkEZggCSz9i/LKmJkYeNzdQAAAABJRU5ErkJggg==" InformativeScreenshot="7d20654ffcdd32f1af1d85d8c26b2a41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Intranet Mall' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="822, 732, 276, 39" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='inputLogin' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAArCAYAAACjF5c7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHjSURBVHhe7ditjiJBFIDRfQ1CIKHXzAo0GoVAYRAoDAaD4vl7c0WRpqcTtn9u0js54iRD3Z5G8aWqfi0Wixogg8AAaQQGSCMwQBqBAdIIDJBGYIA0AgOkERggjcAAaQQGSCMwQBqBAdIIDJBGYIA0AgOkmU1g1ut1fblc6u122zkH/j+DAnM4HOrn8/nyeDxGh0Fg4OfpHZjdblff7/e6qqrO+VACAz/PoMCcz+fOWYhAxI6m7G7i+ViPgMT/7ff7zp1PCczxeOych/bOKT6XGTA/vQMTO5fYwXT9uGN2u91eUWh+joBcr9e3OEV8Yi1mn+ZlrYh3x2zqnRQwncGXvBGC2EU0A9AVhHgu1mOtfQSKv2MtZp/mZa3oeh6Yl8GBKSIe5SjTPsIUsT5FYOK7mu+d4nIZyDM6MKHsUkLziNM0NjDx7ubuqOt5YF5GB6Z5z9K+g2n6FJBP83Zg4rMdDMxb78C0j0HtH3lEJi6B2/OxgQkRmPLe2CmdTqe354F5meSIBNBFYIA0AgOkERggjcAAaQQGSCMwQBqBAdIIDJBGYIA0AgOkERggzSswy+Xy2xCgj3ZHXoHZbDb1arV6GwL8q+hHdKS59nZE+l1V9Z+vL4Deoh/NngR3MEAagQGSLOq/0R0790Lmv7UAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'I' - Inserir senha" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,251" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" SecureText="[strSenha]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.intranetmall.com/shoppingspmarket/" DesignTimeRectangle="822, 732, 276, 39" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='inputLogin' aaname='' /&gt;" Guid="4542df00-ce47-492d-9db7-ce0a6aaf429c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAArCAYAAACjF5c7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHjSURBVHhe7ditjiJBFIDRfQ1CIKHXzAo0GoVAYRAoDAaD4vl7c0WRpqcTtn9u0js54iRD3Z5G8aWqfi0Wixogg8AAaQQGSCMwQBqBAdIIDJBGYIA0AgOkERggjcAAaQQGSCMwQBqBAdIIDJBGYIA0AgOkmU1g1ut1fblc6u122zkH/j+DAnM4HOrn8/nyeDxGh0Fg4OfpHZjdblff7/e6qqrO+VACAz/PoMCcz+fOWYhAxI6m7G7i+ViPgMT/7ff7zp1PCczxeOych/bOKT6XGTA/vQMTO5fYwXT9uGN2u91eUWh+joBcr9e3OEV8Yi1mn+ZlrYh3x2zqnRQwncGXvBGC2EU0A9AVhHgu1mOtfQSKv2MtZp/mZa3oeh6Yl8GBKSIe5SjTPsIUsT5FYOK7mu+d4nIZyDM6MKHsUkLziNM0NjDx7ubuqOt5YF5GB6Z5z9K+g2n6FJBP83Zg4rMdDMxb78C0j0HtH3lEJi6B2/OxgQkRmPLe2CmdTqe354F5meSIBNBFYIA0AgOkERggjcAAaQQGSCMwQBqBAdIIDJBGYIA0AgOkERggzSswy+Xy2xCgj3ZHXoHZbDb1arV6GwL8q+hHdKS59nZE+l1V9Z+vL4Deoh/NngR3MEAagQGSLOq/0R0790Lmv7UAAAAASUVORK5CYII=" InformativeScreenshot="c8fcccbc415b283b3b3120afa2e9cf11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Intranet Mall' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="822, 653, 276, 39" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='inputLogin' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAArCAYAAACjF5c7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHNSURBVHhe7dmxbuJAFEDR/Q2EQMLbZAtqPoGCnoKKhoaGiu/36iHZGmYdJSA/FLwn0lHIzNjl1RvyazabtQAZBAZIIzBAGoEB0ggMkEZggDQCA6QRGCCNwABpBAZIIzBAGoEB0jwcmPgZWgeoCQyQRmCANAIDpBEYIM1TgTkcDu16vR7cf9Z+v78Z2gPe048JDDA9owdmu9221+v15nK53J1rmqY9n8/9fnkmngtxbrPZtLvdrj0ej/050w28n1EDE2GIKCyXy9vfEZTT6dSfjUjEmaG9OjBlnOJ98d7uWeA9jBqYMiDlWoQjIlE+V0ejDkw9sQy9G/jZRgvMZ1NGRCPiUO9/NcEIDLy/0SeYLhJDa/FMXH2671XKYAgMTM9Lv4MpI1ITGJiepwITEemmkHoaid9D62Hov0hdVAQGpuepwAytfyXiEHGJyHRr8TliVa4B0/GywMR0Uk8lcXWK61Z3pQKm5WWBCRGY8npUTzTAtLw0MMD/5eHAAHyXwABpBAZIIzBAGoEB0ggMkEZggDQCA6TpAzOfz//ZBHhE3ZE+MKvVql0sFnebAN8V/YiOlGt3V6TfTdP++fgAeFj0o+xJ8B0MkEZggCSz9i/LKmJkYeNzdQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'ENTRAR'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.intranetmall.com/shoppingspmarket/" DesignTimeRectangle="821, 813, 278, 40" ElementType="Button" FriendlyName="'ENTRAR'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='btnEntrar' aaname='ENTRAR' check:innerText='ENTRAR' /&gt;" Guid="0c278b2b-a59e-49ae-8b12-3fcad50300e8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARoAAAAsCAYAAAC653e+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJwSURBVHhe7dgxbsJAEIXhXMMH4xgcBY7BGeg5BR0dFRUdjaNnaazHZkAQmMKrf6RPcez1EinyLyc/wzCMAFCJ0AAoN4eGYRjm25OGJo4B4FPeFEIDoIQ3hdAAKOFNITQASnhTCA2AEt4UQgOghDeF0AAo4U0hNABKeFMIDYAS3hRCA6CEN4XQACjhTSE0AEp4UwgNgBLeFEIDoIQ3hdB0Zrvdjrfbbfp9+lyv13G9Xs/XD4fD3X3H43E69+h+zbPrut/3k1i72+3uzmufbNp1WDZNHBOazujhVlT09dF1PfwRnjgfofG1+v58Po+r1Wo+l+2vfXSuDYX2DH4+21f3tj8Tls2bQmg680poLpfL9KB7AD4JjbT3Kxi6d7PZTJ/n67N9tb5dh2XzphCazjwKgV/XA90G4JPQZG80Oo6QaR/fO9uXN5r+eFMITWcUgGf/Q4nQ6IH2B/6d0GT7t/dqvwiP7jmdTvM+WtuO9vR4Yfk0cUxoOqOH9ZU3GoVGD75CEm8fr4bG98/eROINx8dD0u6rz44Qoh+aOCY0nWlDkF2P0Oj7CIUe/P+ERhQJX5fdp3MRk/Z6hKn9fCybN4XQdObd0IgCoGkf9CwY2f4RCkVLa3VPu5e/+WT7Zm9GWDZNHBOazigA2f9Q4k+XLDQRiv+GJtbq/H6/T6/7Z2T7RqD4E6ofmjgmNABKeFMIDYAS3hRCA6CEN4XQACjhTSE0AEp4UwgNgBLeFEIDoIQ3hdAAKOFNITQASnhTCA2AEt4UQgOghDeF0AAo4U0hNABKeFMIDYAS3hRCA6CEN+UuNAzDMN+cP6EBgCqEBkCxYfwFr8VPdtyYUaEAAAAASUVORK5CYII=" InformativeScreenshot="ebd36e3950530bc3747a9929568e0d5e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Intranet Mall' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="822, 732, 276, 39" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='inputLogin' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARgAAAArCAYAAACjF5c7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHjSURBVHhe7ditjiJBFIDRfQ1CIKHXzAo0GoVAYRAoDAaD4vl7c0WRpqcTtn9u0js54iRD3Z5G8aWqfi0Wixogg8AAaQQGSCMwQBqBAdIIDJBGYIA0AgOkERggjcAAaQQGSCMwQBqBAdIIDJBGYIA0AgOkmU1g1ut1fblc6u122zkH/j+DAnM4HOrn8/nyeDxGh0Fg4OfpHZjdblff7/e6qqrO+VACAz/PoMCcz+fOWYhAxI6m7G7i+ViPgMT/7ff7zp1PCczxeOych/bOKT6XGTA/vQMTO5fYwXT9uGN2u91eUWh+joBcr9e3OEV8Yi1mn+ZlrYh3x2zqnRQwncGXvBGC2EU0A9AVhHgu1mOtfQSKv2MtZp/mZa3oeh6Yl8GBKSIe5SjTPsIUsT5FYOK7mu+d4nIZyDM6MKHsUkLziNM0NjDx7ubuqOt5YF5GB6Z5z9K+g2n6FJBP83Zg4rMdDMxb78C0j0HtH3lEJi6B2/OxgQkRmPLe2CmdTqe354F5meSIBNBFYIA0AgOkERggjcAAaQQGSCMwQBqBAdIIDJBGYIA0AgOkERggzSswy+Xy2xCgj3ZHXoHZbDb1arV6GwL8q+hHdKS59nZE+l1V9Z+vL4Deoh/NngR3MEAagQGSLOq/0R0790Lmv7UAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABA0lEQVQ4T6XSoWtCURTHcQ1D2ZJRWFEwyzDZDOaVJZtgM41hXN0/MGbTYjaIYBlYNAkiYhXbYDAWFmVP9vY9joP3Hi9usPCB97j39+Oed18ijuN/OTy0I1HAK2KMkYauhZmCO0hYleAHLFNwAw2/IQM/YJmCMzxgjiHquEYKflCZAtWBO8oMedh9wYIW3LCaQE7o7j0qOMcGoQJRwckCucZPhMKiiZMFMucWobC4xxOecYWjAplxiVD4Cy/O+xRJWyAacIOqi7bzvoZXcIkRVpBr0186Qh8XkD/zHTvcwhvhEdo+QBZVFOGeMIef+U1BD1qw2C/+hVNQhnykD9T2i7+KEt/s2Cb8FxrdRgAAAABJRU5ErkJggg==" InformativeScreenshot="ef2900c4e74a436b8f190461aa2c14ae.png" Selector="&lt;html app='chrome.exe' title='Intranet Mall' /&gt;" Url="[strUrlIntranet]" />
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean">
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="854,466" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logou no site Shopping SP Market&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Não logou no site Shopping SP Market&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.intranetmall.com/shoppingspmarket/loja/default.asp" DesignTimeRectangle="160, 138, 182, 58" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='logo' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='logo' tag='IMG' type='' class='animate1 imgLogo' aaname='' /&gt;" Guid="99d982cd-f4d3-4ddc-b107-57648b02b609" ImageBase64="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" InformativeScreenshot="60905b857bb700b8d98540c76960d659.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IntranetMall 4' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="720, 138, 370, 41" ElementType="InputBox" FriendlyName="'INPUT input_busca'" FullSelectorArgument="&lt;webctrl id='input_busca' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input_busca' tag='INPUT' type='' class='inputLoc  animate1' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXYAAAAtCAYAAAC6YEDlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARWSURBVHhe7dqNkaM4EIbhjdpJOArXhLGOYojCUbAI8dMttX6wh/G6632quLqzQUiN+jN7d39GAIArBDsAOLMF+/f3NwcHBwfHBx8rFewAgM9EsAOAMwQ7ADhDsAOAMwQ7ADhDsAOAMwQ7ADhDsAOAMwQ7ADhDsAOAMwQ7ADhDsAOAMwQ7ADhDsAOAMx8Y7MN4u9ymv+LdHn+v4/XvY/kn9Bq+LuPleh+pHM7yA8H+GO/X63j/tV0qgz38/WW8vSPlh9t4me69H60axLmqa74OTDzcrxIGc1io8WONQvieFSKnBPvjPl7NH+6wz9I1nvvsz6jdPGbnc5+f6ZE9Aiw+PNjfY27OdA5zIJWCJobSKyEYmtwee/nBeEMAnBHs5TF/e58Bn+v0YI8huL5h5efZ36dvtzJEZbDLextvxNvbVmO8cN76Bj5fE8+3AyZ8V1hv8a361VAK97R/zOb61UI9zGn73lprEH94tvosn4cfE10DvQ4dwrFm2xjNGltqdSp/1zPP26Dnlz5bcx+q2k2WH297jLjGQY2T7tv92p766PoW5ggYzg32sFFVE4fNrRuu3OQ7vcHDGGtTlO4dPi//MT0fb2oUFY5H1iTJuWmxKe3vmtKA2dTXOVPXltZq/4gdC3atXWNDCM5ibcvPpGeeecgm31v3zWqn76/vG9co5zGPW1hzT33UOY1eAqRTgz1s/DR09maIgVINpVXWYPVgrzXUrNGwVVmDSY2xxBtf17pn5fp21bC11uK/057OfiHYn6mxtV92ca37G2s44ryPz1N+X6mhXINaz0LtBbkvF9Y1q476yHnXewnQTgx2u2H20K01e7xWNbFqgkqwm0HVO14H1cyp3rGW+ZSaXmq+xR4NdiN8CuMfC8xXa9w6R99bei3Yw33tcWXt9n0rqL1WqO12zfH67POO15Z7CdBOf2PXDSU/K11nbOJiOKVjWGMeGa9HIwiKIZyoBvYuDyWt2dyttVbmkT8/vfZq8BytsTrfYj3bqH+eKzlWeVw1J+vZqs+MNW7XP1cfOe96LwHaqcGeN0PecHkzp00Q/9luAn1ve6MfGW+lx03N806vmd/e5H3sZl2ptasml+pjROGcSoM3AyStzy57PmGsrmDvqbFUr3dUPqd/nis9Vnb9Kqudvr/eb8Yat+ufq4+adxir0kuA9EPBPm1S+UdMGXBzkxmfL0Jz7N8vm1tdM23eYQpNswlEgy7Bul83HWsjdI+3Cp813oaSdWX/l4IK+jieOn+7f2xg8z+shnuI88qMZyDX3giQbH7b+cm40+fD177OLHi2MXpqLHT96UU868yBec7ysYr7cFtDUKpTYKxRXv9EfbJ5qzHyXgJWPxDsAID/CcEOAM4Q7ADgDMEOAM4Q7ADgDMEOAM4Q7ADgDMEOAM4Q7ADgDMEOAM4Q7ADgDMEOAM4Q7ADgDMEOAM4Q7ADgTDHYOTg4ODg+91htwQ4A8IFgBwBXxvEfiZFRBIqdlgUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+            </ActivityFunc>
+          </ui:RetryScope.Condition>
+        </ui:RetryScope>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="900,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Não foi possível realizar o login&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

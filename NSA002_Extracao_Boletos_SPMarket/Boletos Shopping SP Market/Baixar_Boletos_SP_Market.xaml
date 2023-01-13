@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Baixar_Boletos_Fiesta" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strDiaHoje" Type="InArgument(x:String)" />
+    <x:Property Name="strMesAtual" Type="InArgument(x:String)" />
+    <x:Property Name="strCaminhoArquivo" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1142,1867</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Baixar boletos" sap:VirtualizedContainerService.HintSize="1115,1802" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://www.intranetmall.com/shoppingspmarket/loja/default.asp" Name="strUrlLogado" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: IntranetMall 4" sap:VirtualizedContainerService.HintSize="1053,1680" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Baixar Arquivos" sap:VirtualizedContainerService.HintSize="1019,1454" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Acessar menu Recibos" sap:VirtualizedContainerService.HintSize="957,1330" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="895,32" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+              <uix:NClick ClickType="Single" DisplayName="Click 'Financeiro'" sap:VirtualizedContainerService.HintSize="895,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.intranetmall.com/shoppingspmarket/loja/default.asp" DesignTimeRectangle="866, 167, 92, 30" ElementType="Text" FriendlyName="'Financeiro'" FullSelectorArgument="&lt;webctrl aaname='Financeiro  ' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Financeiro  ' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='dropdown-toggle' check:innerText='Financeiro' /&gt;" Guid="aede3c14-109d-4f00-9672-0291c63ae804" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAAAiCAYAAACgCNxfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGsSURBVGhD7ZU7soMwDEXfnuhpmeyB9NB5CWEFYQOs1Q/xlW0FCANzU9zizEDkj9CxnL8syzzBQQFgBgF5nptBcj8UAIYCwFAAGAoAQwFgKAAMBYChADAUAIYCwJwQUHj37nzXhTTPzBeu9d3b+cKch+cX8zspoPXuYcXIt1wr4Nn47lVO76Vv+tNWyqlbOqXxpRpfvtIuGmOyRz9W1lvi8Z5RJ6qTHayrT7yRXzHv8Wl+lPPV3Cug/4DWFUt8uAKWeMTD+XYpwlRcPVbWjuJ67Zl4j+DdyC/OJ8lR8rpRwkX/AVOCyQdGiQfxGD3ekKwFfSzKmNvaST16XpKf1VV2pwVrKqqqimqxUte1OUdzcwdsCxhOW5D0QQGyztINmulUJ0zr7uVnShmvJKvbZiwJR4ovwASk15EevyNAPwds5CbsCpD58Wm3fkvREuTZGmPxMwLGbjgoYKMoqVjFrgBjvuxrjLOQwn9TfAF4BUl8bdnWlf26RwUI4XxdtFGmETsgQAjnb3TUBZwQQK6EAsBQABgKAEMBYCgADAWAoQAwFACGAsAMAggOCoCS+X8SGi+F/FFE7gAAAABJRU5ErkJggg==" InformativeScreenshot="1f85055e64b2134c2976415063f173bc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IntranetMall 4' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="724, 167, 138, 30" ElementType="Text" FriendlyName="'Ordem de Serviço'" FullSelectorArgument="&lt;webctrl aaname='Ordem de Serviço  ' parentid='bs-example-navbar-collapse-1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ordem de Serviço  ' parentid='bs-example-navbar-collapse-1' tag='A' type='' class='dropdown-toggle' check:innerText='Ordem de Serviço' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAiCAYAAACJI+GdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK4SURBVHhe7ZdNcqMwEEbnTt5768odyN7ecQT7BOECPqtCCwGt/lFMO4zHNd/iVSUIWq1PT5D8ORwOCYCtQBwQIotzPB7NQQA8IA4IAXFACIgDQkAcEALigBAQB4SAOCAExAEhIA4I8Q+Ic0r915D6D2tsZz76NHz16WSNgSZxcT5v6X6/M6Kb/47iUM987SN7CEj9hXPdl5A4p34Yw7qljl/Pi7yn2ye79hDvJ053HUW5dubY/0JAnC7dvFNAb6FlI0iIUa4iFBctBz+f1GuvxKnG+caO9Ye+q047iTqJbNyvoN7Zs70QZ+m1jDuHgPprHhC3js7kTL0LCfN68jXqlx9Q8aZjvVeZyUO9A9vFqeSQ8IWWRYp711DKtfzJW8WR49Xv4t55g4b+VO6f5rQ3VY/lsJf+5IH44YB4Y806RiZ5DVqOqU+d57rWFZWpqvn77CBOHVK9ida1H56hEOb5aG4ekNqkKUQrXDNMvhZjXe03C809nfBqvmYda/1iHr5eLo4rA9WsM/DmmTmfz7lvi8vlYj4j2fmNIxekN7q+b92MmlLTFKcO0xXH6pttUj61xtxmLQF/c7XrWJmMsHXV/bP1ublbmU49tXq35HlUGmLnv3Fakszwek6wM8+IU53kAu9X1d6C2GC3jre+OQOZLatr9Z+hmvLtYl3TcHnoZ+sej4A486mqN2x6lfJm7ZDyszxYCpqFpcY5z4hjhMnfFOvmreMPwwVs1vHEKZ+ra2t9vgwqM/ezpiFhtkpDhMTJ5A3nrzoZiBfSFMDynPFf1SQmv6eE8pQ4I0Xuua76ryrXY/OaAoj+CfUm8Or44uiDR8j1ibosizozZ45fJC4OeBH6sLwCiPOWvF4eiPNmLJ+k6pP994E4IATEASEgDggBcUAIiANCQBwQAuKAEFkcALYCcUCAQ/oGymR9cExiQ6MAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="895,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="895,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Acessou menu Recibos&quot;]" />
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="895,32" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State - Checar se a janela de autenticação existe" sap:VirtualizedContainerService.HintSize="895,472" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="441,246" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Autenticacao_Intranet workflow" sap:VirtualizedContainerService.HintSize="379,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Boletos Shopping SP Market\Autenticacao_Intranet.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="strDiaHoje">[strDiaHoje]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="strMesAtual">[strMesAtual]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="strCaminhoArquivo">[strCaminhoArquivo]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,114" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="247, 8, 256, 35" ElementType="TabPage" FriendlyName="'Fechar'" FullSelectorArgument="&lt;ctrl name='IntranetMall 4 - Google Chrome' role='pane' /&gt;&lt;ctrl name='O formulário não é seguro - Erro de rede' role='page tab' /&gt;" FuzzySelectorArgument="&lt;ctrl name='IntranetMall 4 - Google Chrome' role='pane' /&gt;&lt;ctrl name='O formulário não é seguro - Erro de rede' role='page tab' automationid='' check:fulltext='Fechar' /&gt;" Guid="784e396d-d1d8-42f4-b05c-2cc897568692" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASsSURBVHhe7Z1rahRBEMe9l/kQ9AAKih4gEMgJFBRkAxFE8IMXCMseQdQQzQ1CIAeIeWAeasxLMRsjtF093TM13TU9M5vd2Lv+C34kXf2Y6t6u//TMl7kBg8FgMBgMFpqCwWAwa1FBOD75oT5t7wVsbO+KfgBAImwJPk1d7taeEPr932JHAEDiVIhCjEaPDEcnZ7YDTgYAjBPFiaBZ7jZ+h7C7/00cAACQNps7+6JforEgnJ79FAcAAKTNxlbzk31jQfh13hcHAACkzUgEod+/EAcAAKTNm3cfRL9EY0EgkwYAAKTNy1evRb8EBAGACQeCAADIgSAAAHKSEoS1xVk1NX07Z25xXWyXsa66M1m7+SWpfrRQrEF8Swtqaqan1riPYebXWRHrBmW5o9fAXFOvx+IVxq6JHfwfJCMIJlm8DWk2e1UC0QYecnK1IRSEFTV/7Qm1okVAx7DaU3O1AhrjX8QOhsXd+w/V46fPAj/5qM73x0hDEMyGXlDLQR2dAmZVd9X3a1IThNX18U2ocY4dqM7zF+akzEWB/icf1fG2daQhCJHkplNC8EhA7fVkM6yQ2Luk8xd99N1Pt+nSCWQ6E5dsTPIXbc0JxZSZAPlxsTIXhKIvUQhb1qaXXUf380XEnIBcv6o7NM1L1y1Xxef6c39dHae0bpIoa/hYPM4m/k6vEHU7l7wdL9v/u2ZN6n5T4PPoSSYAJARODMgntY2RhCD4idKojjadS1azcfimp2R35Szxw0Qsb7pScrtx+TW8clVc3G/GCgQiq/Mfh0rX5cTi4/BYTUKy5DZjCMlOfj+Rg7ErTmle23xu/m9hYmkoCHqeedL745R+UyCRicItzWBiQCR/QqCNJt4ZeB/9v5+cRfJlJwSeDOVTh1fvjVuKi5WL8akuEx13J5Pb8DIlmZ+gYZyGWBKxF6sG65fWrDxnC82Hx83G4O1KAmqhawR9ad7+mnFBic3Fr9PjVP+mhQ8UuJPBTQ1/fGjDZLxDiG6eUQsC9Wcxim2yuqI8DEHIxCCfB2tH12ksCHx+USg+nfTsGv6aE6EfgnAd8McE/vggtY2RhiBozF2Ibwi74Ss3LN/MtJkqj5dhojUWBDNuUWdi9JO9SRtbx8u8navj5Rw/UfIyn6Pt79rRHPicvBhzjJ+vWx0suf1rOPxrmXb8t6iIWZpnKbZyX1DgXiryxwQnCuP5UtFiNgjdhSzRuwFPXFdmfSsTXtNYEGzbfMxOURckd02bsGwFz/aTjuoGKVFsma/XnL4ub1dey0gieesWrnk5Tn8+vK9b05Kfv1T06kox+/MkKn9TwLlz74H4zoB8VOf7YyQlCGASCQUZpAsEAYwUcyKQHoVAkkAQwJChE0FxzK98FAJJAkEAAORAEAAAOSMThO3PB+IgAIBE2RmhIOx//S4OAgBIk00tCG/ffxTrJFoJwtGx+2ALAGASaSUIl5d/xEEAAInS8nNurQSBrOoDsACAtBjko8ytBYFs9wCfdQMgaVp8vo0zkCCQ4X0CAImyI/gaMrAgkJ33L9Th0ana+3IoDg4AGD2b9JdEgE4FLT7bJnElQYDBYJNlEAQYDJYbBAEGg1lT6i8Uu0i2cr54agAAAABJRU5ErkJggg==" InformativeScreenshot="fcfd2be8f967fc8b8757612db1025186.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='IntranetMall 4 - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="8, 8, 256, 35" ElementType="TabPage" FriendlyName="'Fechar'" FullSelectorArgument="&lt;ctrl name='IntranetMall 4 - Google Chrome' role='pane' /&gt;&lt;ctrl name='IntranetMall 4' role='page tab' /&gt;" FuzzySelectorArgument="&lt;ctrl name='IntranetMall 4 - Google Chrome' role='pane' /&gt;&lt;ctrl name='IntranetMall 4' role='page tab' automationid='' check:fulltext='Fechar' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEqSURBVFhH7dahSwRBFMfxDSJiMhouiJjlMBkNly+YjGI0iRiv+hfIi6bLBhGTXDIZRMQoRjGIwSgPUXj7fWWY3TvOm5sJ/uBTdmHfjx1mdqv/NEZ0A2/4wQhLJlkKKHAMHxzaMslSQIFdhIPfsWKSpYACCzjFPa6wjz4WzcySvUAY0XOES+LusG5mnmwFRE8QGxpzi3oJ/5xsBUSX8YLYsDY7ZuoUUMA/RorYkDaHZuoUUKDeTqJfiA1pM4DgBl0zNgUU8KP4EbEhbV4RXq+36dhkL+ARPUD4oCZ+ZPurD+8/m4kz9wKiHVzjCf6xCX9SfZtewA+w+pdN9APfODKNKaDAGXyAu8Qqetg0TRFdw8TbL3uBIcICDyZ5CiiwDT9IPrFnkmeuBarqFwUJPR3QZLrPAAAAAElFTkSuQmCC" InformativeScreenshot="2a8f69887a4f3498ffeca9d3afc63521.png" Selector="&lt;html app='chrome.exe' title='IntranetMall 4' /&gt;" Url="[strUrlLogado]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

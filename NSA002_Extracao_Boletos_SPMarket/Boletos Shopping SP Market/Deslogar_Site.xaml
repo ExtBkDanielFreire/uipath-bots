@@ -1,0 +1,121 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Deslogar_Site" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,1053" sap2010:WorkflowViewState.IdRef="Deslogar_Site_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Deslogar_Site" sap:VirtualizedContainerService.HintSize="558,988" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Deslogar chrome" sap:VirtualizedContainerService.HintSize="496,866" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="https://www.intranetmall.com/shoppingspmarket/loja/default.asp" Name="strUrlDeslogar" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: IntranetMall 4" sap:VirtualizedContainerService.HintSize="434,744" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Deslogar" sap:VirtualizedContainerService.HintSize="400,518" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Sair'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.intranetmall.com/shoppingspmarket/loja/default.asp" DesignTimeRectangle="1707, 110, 19, 15" ElementType="Text" FriendlyName="'Sair'" FullSelectorArgument="&lt;webctrl aaname='Sair' parentid='topo' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sair' parentid='topo' tag='A' type='' class='link1' check:innerText='Sair' /&gt;" Guid="3c30afde-2984-4b3a-8b1e-7486c3a606e9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACjSURBVDhP7ZFhDoMgDEZ3p55rvUrDTeAkhmOYcIdvgmUM7JaZ6Z/Fl2gE7aNfveFELrnJv8gnARG1y0V9YRMdgUPS1ZYXeYSQLPfj+E7eJWL4ed1OgSHT+hzdUlu/08TmWD5FxezBWtzLt2M0f2guyofUwiJ8dt4kvbwlqpjyQhbePdI4rred75UXSS8vqXbLx+ijUPc5eMjPnR/AJTc5UQ48AIlebpVdQEaQAAAAAElFTkSuQmCC" InformativeScreenshot="d681535462d24521d0fb7d21d06113fd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='IntranetMall 4' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="1591, 110, 105, 15" ElementType="Text" FriendlyName="'Minhas Informações'" FullSelectorArgument="&lt;webctrl parentid='topo' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='topo' tag='A' type='' class='link1' aaname='Minhas Informações' check:innerText='Minhas Informações' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAATCAYAAACa0IPnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVGhD7VaJbcMwEOtOnitexfAm9iRBxgiQHdTj6eNJllOkTloDImBEL3VHnoR8uY7ToZt2QnTTTohu2gnRTTshumkfwcMtl8ENl0Va0l5vYfw1kGk3Nw1CPNeEtzkeKLhOub2Dxzq66Ro6BwFx/Iwz5CLfuD6L9AO4L25CHPI7Sky/1cWadpn0M7bhoBnjz41i/KVpOPtfmPUmFDdtkqtrxfbiw9BgmpoYbNUKki9U9TCMbrn7Kd0nZvtxuqlhLo3LmbFI9EZvrI9g0x4rYq35DffOGKAcV1/9flzynBf/lOl6iS3cjnrvdg5exzge9QjPYxi3BbW1fl+LyjQNMj2ROAwBtU0bOWA8nWFOk6KntnlLZI8mAa4iuBLWtDY/5pIwFJMinidQDnMmNLCFx/O3Oc8ZJE7oVa8pc888xfqowRMtatOYKBm0YxoLQn0kzIGaPoRM1ZUrz1dXQxhBaUyLH202htclYaRZzXGeABkMGPE3cyj2K2LhZ+T4oHnm8J9fu6fFhmmCEGyuiANNI9EUhTA+SQm4St4nEjmb/KEdOct1h5jWzOEF0zbyzNjWYts0JRPitJjI2ShuA9QvBUn9ImEIYU0D6kSBV0zTG8ExkhElh8kT+KFpOQfEXd8Ojhuwz6Odq1Fr0TCNA9HecaYJwB2fA/0jg3Owl54JFiuCk9/jR5v3ox95uWpLDpMn0DIttCNnysHP0JNnzYnrbW68Xj7o90QLMq3jOIgRXMwHo5v2LhS39Eh0096A+HTap/c4dNNOiG7a6eDcN4QHTvcg2EclAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Finalizando robô&quot;]" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEqSURBVFhH7dahSwRBFMfxDSJiMhouiJjlMBkNly+YjGI0iRiv+hfIi6bLBhGTXDIZRMQoRjGIwSgPUXj7fWWY3TvOm5sJ/uBTdmHfjx1mdqv/NEZ0A2/4wQhLJlkKKHAMHxzaMslSQIFdhIPfsWKSpYACCzjFPa6wjz4WzcySvUAY0XOES+LusG5mnmwFRE8QGxpzi3oJ/5xsBUSX8YLYsDY7ZuoUUMA/RorYkDaHZuoUUKDeTqJfiA1pM4DgBl0zNgUU8KP4EbEhbV4RXq+36dhkL+ARPUD4oCZ+ZPurD+8/m4kz9wKiHVzjCf6xCX9SfZtewA+w+pdN9APfODKNKaDAGXyAu8Qqetg0TRFdw8TbL3uBIcICDyZ5CiiwDT9IPrFnkmeuBarqFwUJPR3QZLrPAAAAAElFTkSuQmCC" InformativeScreenshot="ac696ca341dc5d9d6bf45d76abc0be6f.png" Selector="&lt;html app='chrome.exe' title='IntranetMall 4' /&gt;" Url="[strUrlDeslogar]" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

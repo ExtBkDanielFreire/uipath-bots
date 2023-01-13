@@ -1,0 +1,231 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_Fiesta" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="strUsuario" Type="InOutArgument(x:String)" />
+    <x:Property Name="strSenha" Type="InOutArgument(ss:SecureString)" />
+    <x:Property Name="strUrlSiteMultiplan" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>986,2410</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.ServiceNow</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPathTeam.ServiceNow</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_Fiesta" sap:VirtualizedContainerService.HintSize="996,2345" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="934,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando login Fiesta&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="934,2067" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="896,1830" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:03">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <Sequence DisplayName="Ação" sap:VirtualizedContainerService.HintSize="496,1195" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Canal Lojista" sap:VirtualizedContainerService.HintSize="434,1073" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Fazer Login" sap:VirtualizedContainerService.HintSize="400,847" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'usuário'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Text="[strUsuario]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://canallojista.multiplan.com.br/CanalLojista/apps/services/www/CanalLojista/desktopbrowser/default/index.html#/home" DesignTimeRectangle="1265, 311, 253, 34" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched' aaname='' /&gt;" Guid="6215062a-706d-401b-b2c2-ba3775f12895" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAmCAYAAADEMi7HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJwSURBVHhe7d07juJAFIXh2f8OvAFvwGIHkCFSJ4QkDIIESHio2qf8oMo8PK0eN6Lu/0k3MH4QneOyE/9xAEyjBADjohI4Ho9uuVy6xWLh5vM5wzCJjDKtbCvjfV0JaKcOXK1Wbrvdut1uxzBMIqNMK9vKeL8IuhJQS+ggHXC5XNz1emUYJpE5n88+28q4sh7qSkANsd/v/QkA0qNsHw4Hn/VQVwJ6blBbAEiXMq6sh6ISYBUApE0ZpwQAwygBwDhKADCOEgCMowQA4ygBwDhKADBuhBLYuGmeuaJsNgPlJHP5bNNs/VT9P9nkwR8F9J9DxwCWfWwJbGb5w/8A8D0fWgIbV5b/a0UB2PbGEihdkVVL9Wba33WHj5fv/evF52X5tDqiURZ+e6pHgGqfzrm/Xu/8rKh+Aex6WwnEhXC7sw+WQBX0fiGE+9rwt+Lr1ceHqxG/PywSwJi3lsCjF3bDK4FYVCbNSiAMdHS9B/urH6tiyN30b7MJGPPrJRD+7otAS/IgmMMlUG/flvP/XgL315bXJQOkboQSqMMdLrlrz8Pmw9mE93UJ3F/j5ysBXZOVAOwapQR82HpL7DDoPniTIIxhOP25t5d1/rzqbl8Hv7907z3jD5UA7wSAO+OUgPgwB8v2XtC6RwE/8Rv6cF8+K6O7f1sK7XnFd1YCXl0E3TUoABg3XgkA+AiUAGAcJQAYRwkAxlECgHGUAGAcJQAY97IE9Gmi0+nUbAFIkTL+9DNk+kjher1utgCkSBl/+kHS9tPkOkhfJQaQDmVa2VbGn36aXLRTLaED9dzAMEwao0wr2/0CkKgEANhDCQCmOfcFOWPhWo7AH8gAAAAASUVORK5CYII=" InformativeScreenshot="30d4a1be924282137a6859044aa45d4d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Canal Lojista' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1265, 286, 47, 20" ElementType="Text" FriendlyName="'usuário'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='text-capitalize' aaname='usuário' check:innerText='Usuário' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAYCAYAAABXysXfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE6SURBVFhH7ZTRjcMgDEBvJ+ZqVkHZJJkkYoyTsgNnG5PYJj2atKpoxZP6QcCGh01/4hfRZVqly7RKl2kVIbPG6eaiX3goCKOLw7zy6FnSPm4MPD4G96ytsbxdZp2Hwz1ewZtl1hiWV1W45IJMiN5BC/Avf8cb121h8+k4d5tgBbN4Gk/YWjCHMWU+E+88fNGcltFi+01XZeDAVkzOZYmMzpfWy+6geXkhwCWZo4dZr4xGXQpXRh5M5TuYT4JDnH55CDwsI7+TEJZabFCXSeO9TR6XKXMj5XmFjLmtjfuStAkf4n+ZMsfzlcGcdysDYJApnTwwJRhFUrkJxe6PkuLg9pOAbQnzBmoy598MQ4cS7WACthajn/5HkXPDHFQ1slyO82cqQyShLYdZj5QyH0yXaZUu0ypdpk1i/ANMTwdBuj4x/wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                        </uix:NTypeInto>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'I' - Inserir senha" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,251" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" SecureText="[strSenha]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://canallojista.multiplan.com.br/CanalLojista/apps/services/www/CanalLojista/desktopbrowser/default/index.html#/home" DesignTimeRectangle="1265, 405, 253, 34" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength' aaname='' /&gt;" Guid="6392e598-dd12-4e4c-9569-7791e8013558" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQEAAAAmCAYAAADEMi7HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJQSURBVHhe7d0/bsIwHMXx3v8GuUAuEHGDdEOsWRhZoIIFWPgjNy84wU4TKjUxUu3vR/oNkQNM78Vuh3wYAEmjBIDEeSVwPp/Ner02q9XKLJdLhmEiGWVa2VbG+7oS0KJu3Gw2Zr/fm8PhwDBMJKNMK9vKeL8IuhJQS+gm3XC73cz9fmcYJpK5Xq9NtpVxZd3VlYAa4ng8Nh8AEB9l+3Q6NVl3dSWgc4PaAkC8lHFl3eWVALsAIG7KOCUAJIwSABJHCQCJowSAxFECQOIoASBxlACQuEAl8GXKPDNZ1k5uyp1dmqIqTJaX9bcDmEuAEqhMUQe/qOyl7EpTutd/RQkAs5u/BOrA51lRV0EAlAAwu/fsBHq+PnPnqOAWhj5bHx0qFcnAui2Byv38wv2h/jEkUBkBEQlQArVmNzAcwqYAnKd5c90F+VEgz3Ub6nZdJVCv55/20/Z3usKpr4t2zX62uxfAoDAl0LKhfYb8EUx/l6Dgt2VhdwLuHxHdI8DAcaBajAfdLxgAQ8KWQMN9Itsn/Y9pgz+9BHTtfTclALz0hhJwn8gqhFf/LpxWAv1CYCcA/G7+EvDO5eKfzft/E/BNKYH+UeNxTQkArwXYCfzc8rtPZxnfsk88Dmi9+97cFAt2AsBvApQAgP+EEgASRwkAiaMEgMRRAkDiKAEgcZQAkLiXJaBXE10uF3sFIEbK+OhryPSSwu12a68AxEgZH30haftqct2ktxIDiIcyrWwr46OvJhctqiV0o84NDMPEMcq0st0vAPFKAEB6KAEgacZ8A3CT+e9TVQ+qAAAAAElFTkSuQmCC" InformativeScreenshot="f7784a91799fe0fa68ebf60981ac5391.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Canal Lojista' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1265, 380, 38, 20" ElementType="Text" FriendlyName="'senha'" FullSelectorArgument="&lt;webctrl aaname='senha' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='senha' tag='LABEL' type='' class='text-capitalize' check:innerText='Senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAYCAYAAACMcW/9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVFhH7ZRtDoMgDIZ3J841rkK8CZ7EeAwT79C1ULB8zGyCyZbwJv5oauHp2+oD/kQDtLcGaG8N0N7KQHewTwVKhUeD3TjVosWAelo8/boE6AoG4czCIWmzYGV8VV1BEUorg7g36HZHM+2zFmshm6JaXJOFmq3kGXSV9ZO0JF+50rB0R52r9RcdpHDFxfEy3+SR54tDnkAxr2eu5nuiKRibkOPa+C4r+5hYfPAB4otTtwkuNMSOyg9Pjrsy+nUqYYJSE7zqoE6yM3aseAJcOyjFydmfg8rOCPrsV9UGmkOfO5rsCSndlXxHU7WA5mvl4xNHy/HKLknvx9M4esrHczWY6asd/S0N0N4aoL01QPsK4AWkKM7LIIG11AAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'entrar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://canallojista.multiplan.com.br/CanalLojista/apps/services/www/CanalLojista/desktopbrowser/default/index.html#/home" DesignTimeRectangle="1265, 489, 253, 34" ElementType="Button" FriendlyName="'entrar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-block btn-primary text-capitalize' aaname='                      entrar         ' check:innerText='Entrar' /&gt;" Guid="4e78ebca-e426-4369-ab1d-c7699e566f11" ImageBase64="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" InformativeScreenshot="b4536508efa154b69d05843259866331.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Canal Lojista' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1420, 439, 97, 20" ElementType="Text" FriendlyName="'Esqueci a senha'" FullSelectorArgument="&lt;webctrl aaname='Esqueci a senha' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Esqueci a senha' tag='A' type='' class='pull-right btn-link-primario' check:innerText='Esqueci a senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAYCAYAAADjwDPQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIvSURBVGhD7VY7jsIwEKXfau+HOAsdDQVXoIWaQ4CinIASCeUAdEiz9vg3Yye2IbuLi3mSpZDnjN/MG9ssQPAxPJ9PGIYB+r6Hx+Nh3wIsuq4DGZ8Z2ozr9coM0ZCd0iDElAYhpjQIMaVBiCkNgpnSb75h/cXH/mzJpnCBfbPaAO6HFaw3F/vrdSSm7A6D/SV4F2JKg/g3U3Ahf6xtobfvAQY4LcNxtzsc1dGygtPNsGlMffQEXmM6tsLtCDvPuVhmzenjyxxvPubyCHfLJIjih5g8L1bk8xZj9lQ34Z0p9DpIaxC4WF/hTrEFQuGkWGe1ID4Y4XRBE6PeFEyAiGJdhutSAy9wqjFFFS1wufsnjqPywuc4r2ieNkXF9Lw11vGuyfh8kkdBX91OSYpjEZuF4EXPmzJWXM2bmJN6SqZEKMVJuLG8dGFds+jnqLvpGqyxEHm9sb76O8V2Q9IBydHwiin6me5MNzSfS6RkiuFpzMm86FxadPKtHy7X2abk9b1x0ZtC4gJjHRXtqrwpWlyYG2NaT5wkRcrV5WXmYTF1DkmzEcwypayvzhQlIgShQY1B9BtMjJiCAkkCJZ4BO5aaVnOnUNM1Uo0BiiPFC8U08ce/UZhlSllf4aK3k8nR5d95mKCO26s/AXxRI2iaH1mXJoTGBM4kljPFFsV/oxqKFIyDa+OF5nnp4debZUpZHzPld5AWXfAaxJQGIaY0iD8wRTAXYkqDEFMahJjSHAB+AI95YOMRfXZlAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="98cb843b0fe763ebc7db8d0fe97c06b0.png" Selector="&lt;html app='chrome.exe' title='Canal Lojista' /&gt;" Url="[strUrlSiteMultiplan]" />
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean">
+              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'SPAN'" sap:VirtualizedContainerService.HintSize="854,466" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="10" Version="V1">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Logou no site Multiplan&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Não logou no site Multiplan&quot;]" />
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://canallojista.multiplan.com.br/CanalLojista/apps/services/www/CanalLojista/desktopbrowser/default/index.html#/dashboard" DesignTimeRectangle="1512, 133, 28, 42" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='mainApp' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mainApp' tag='SPAN' type='' class='mdi mdi-2x mdi-exit-to-app' aaname='' /&gt;" Guid="1c597819-5dc7-4de8-9a0b-60aad77c81ef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAuCAYAAABJcBuEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG4SURBVFhH7ZY/a4NAFMC7d+hnyNCP0DlDhw7ZsiVbv0H3bg4OgY4dSjsUFDJ0lCIhm4QI4tRBUnBICAFxcCjB9fXOfznNaa/G82hx+IHnnfd+3j2fdxaGIYikE+gESgX23go+NRXMyQMsa/MItmbBNqDHwNAFfAMW/Qt4P2+IvgyOT4mDoArsprfxg70r0AcDmJ2A3osl5tP1URwMXUAZxQJjFXaUfnbWYI8TAeXfCaA8MSUNtrS+DF4CgQXLm8tojH5XJVFTwDee48/oxQCf0o/ZvCaJWilRU4CVnyVqCuwDD3yPhRU48rBC4tQcqEFeQojAG2y+0rla2IKP+2sieENbwEYA7hOnJBT+GbIUInPIsRCxlWILrElVcAxPASb+rIDoA4nwIxlG7KG0RTqBTqBRgaiA/bJ4dVtQLuCqMCeq2cJI+1CVJO7nltyQiTYeNwJbQffwOMlIns9TIhD/RMigTnqNghRlsvaRQHnglEqBsj8YiSMR42gr4ObHF6nIgcOvNP8WxP0ETgIH8FvGEsWt4bYC6GHiraPvO2oXJ8VtLgKFZc4mJU5LESgh+eVAO3QCggVC+AZ/YkcxbkI1OgAAAABJRU5ErkJggg==" InformativeScreenshot="c26c37c0c55b99e2e3df77e9c42da563.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Canal Lojista' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+            </ActivityFunc>
+          </ui:RetryScope.Condition>
+        </ui:RetryScope>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="900,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Não foi possível realizar o login&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

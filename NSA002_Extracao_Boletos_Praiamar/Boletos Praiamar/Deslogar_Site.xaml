@@ -1,0 +1,120 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Deslogar_Site" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="959,897" sap2010:WorkflowViewState.IdRef="Deslogar_Site_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Deslogar_Site" sap:VirtualizedContainerService.HintSize="558,832" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Deslogar chrome" sap:VirtualizedContainerService.HintSize="496,710" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="http://189.20.220.92:6081/portal/public/financeiro" Name="strUrlDeslogar" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: PORTAL GRUPO MENDES" sap:VirtualizedContainerService.HintSize="434,588" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Deslogar" sap:VirtualizedContainerService.HintSize="400,362" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Sair' - Deslogar Site" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2eeedbe3-badd-4fa5-9ee3-913be9c157d7" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="http://189.20.220.92:6081/portal/public/financeiro" DesignTimeRectangle="155, 214, 26, 14" ElementType="Text" FriendlyName="'SAIR'" FullSelectorArgument="&lt;webctrl aaname='SAIR' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='SAIR' tag='A' type='' class='bt_sair' check:innerText='SAIR' /&gt;" Guid="6529fb5b-52c0-4ca3-abbe-6eeba655b8ed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAASCAYAAABM8m7ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHUSURBVEhL7VM9T8JQFPU/8BdcWBiIC4nYAKm0Nm0NYSMmRibigIlRVxOc1KFxIg2BwVQTNMZgGJiYGJ3YmPgnx/PoNym4GBx0OEnfve+e03vPfVup7UP8Bv6FN4a4cE7Hi13AfLhL5DHrlXGbj+QJ5Uxe5MaNeLx5XWRchiXOmoLpgsOHx5UL70eETXR7eczfZHQrJmqqjoHD87OCZuRO22ZMkNkalCCeLDy5II9EVA4weWNNT0XNux8R1jDm5WnLCMhSVRVjqwxL8s47JBjuMSa6ltHe8eJEknB0Ks2WmKSXJ2IdWw8SkwWML3TUs2GRj9pVyS3OafwBdnRuBrl1wpksp/e8smMibaB9V8Lsw/PFVnATeGzCefRHTFs6/H5UUfdq13tM9Pdj+xIX9pE2UT9WMHmln/0yLkWsqOKTBH6XbvclOEW3ZrXHOkZ9Ci/tRCisqhSSMDoJk5lT4WURL5pPvNQFMb12d2LdqI3zkMfnjnRsYCD+zNmHJbZaMtC16fk7R0QLFrmOiobY0gWY74QTWSecSrPrd9ZbOjKeXmzUmXz8Hc/7MpwKc9UyZglv133TBQyq3wgTbj60JtnjDSAQfrpP9vCnUT9S4sKbxl8TPsQXNMX4sYVvaecAAAAASUVORK5CYII=" InformativeScreenshot="4afa36b7bbf0da1e2a205ca38fdd0ed0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PORTAL GRUPO MENDES' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="8, 156, 230, 34" ElementType="Text" FriendlyName="'Portal Grupo Mendes'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' aaname='Portal Grupo Mendes' check:innerText='PORTAL GRUPO MENDES' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="338,32" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="1912, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="f6f328d2a0befd2b12047c968d79e648.png" Selector="&lt;html app='chrome.exe' title='PORTAL GRUPO MENDES' /&gt;" Url="[strUrlDeslogar]" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

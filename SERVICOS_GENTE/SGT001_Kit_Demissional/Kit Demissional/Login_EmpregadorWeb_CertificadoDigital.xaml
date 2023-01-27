@@ -1,0 +1,277 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_EmpregadorWeb_CertificadoDigital" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1195,722" sap2010:WorkflowViewState.IdRef="Login_EmpregadorWeb_CertificadoDigital_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Login_EmpregadorWeb_CertificadoDigital" sap:VirtualizedContainerService.HintSize="462,657" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strUrlEmpregadorWeb" />
+      <Variable x:TypeArguments="ss:SecureString" Name="strSenha" />
+      <Variable x:TypeArguments="x:String" Name="strUsuario" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="400,70" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[strUrlEmpregadorWeb]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/login.jsf;jsessionid=ZMr3DLEUby0AL2uTB919WNJ8.slave22:mte-sd</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando login Empregador Web usando Certificado Digital&quot;]" />
+    <Sequence DisplayName="Ação" sap:VirtualizedContainerService.HintSize="400,183" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Empregador Web" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1337" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Sair'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/login.jsf;jsessionid=ZMr3DLEUby0AL2uTB919WNJ8.slave22:mte-sd" DesignTimeRectangle="675, 330, 48, 34" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Sair'" FullSelectorArgument="&lt;webctrl class='raizSemFilhos' parentid='nav' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='raizSemFilhos' parentid='nav' tag='A' type='' aaname='Sair' check:innerText='Sair' /&gt;" Guid="b01f2377-7a8f-4b57-866f-b46ab66f7743" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAmCAYAAACLZrh7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEiSURBVGhD7ZaxDYMwEEUzQWZiCVZgECo2oKOAmgmQmIAeClZghgu2+QRbjkUB0cW5Lz1FMS78fMclj2dSUkzEJ7QsC8UAIkJcQUSIK4gIcQURIa4gIsQV5P+Epqa2/vylzezdZzNTlZWU975n94AEhYxMS92+NlB+Wuq7IEGhrlirUgzWmpbMOpr0d1OJvYLOuq7Q2FGa1JTqfcfLuRYk3HJ96xzUxhY21TNt5grd337IiaHwqQr+fX6hmqrxuPd6kBNCNlZVttvfZVf8Qve1GkACQupQnptVbairZA79HhChCrEQcgeAwhzUVMgR2t431kIK93fImnoYGtu6akcjyFjoV0BEiCuICHEFESGuICLEFUSEuIKIEFeQ+IS2z0hC9AIKGQL2MJ1SVwAAAABJRU5ErkJggg==" InformativeScreenshot="4e5c8ba2f85e7f6669c161d9c630322f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Empregador Web' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="572, 330, 103, 34" ElementType="Text" FriendlyName="'Administração'" FullSelectorArgument="&lt;webctrl parentid='nav' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nav' tag='A' type='' class='raiz' aaname='Administração' check:innerText='Administração' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAmCAYAAADDeWW+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVHhe7ZhBcsIwDADzgr6pn8gXeAgnfsCNAzkzfQAdLr1yhwNfyBvcyJZsyTgkoYSJpsrMDiGWbVlrpx2qj8+tM3RgshRRfX3/OLjatjUWjslShMlShMlShMlShMlShMlShMlShMlShMlShMlShMnq43J0Nfwmtzm79nQIn6W4NzJOFia+PhXaIje3W21d3dwKbX2EPo/Hbd1xMzzumJgpXJu9zws+4UfUoRzfwShZUIj1Zmh3PSPrdbxa1hIZIevs1p8Hd/Sfe7e7yHYokv8Jf3Vw6ygLT0yDr5IOeB5j/XjQn50seNXgGCEmzSVEQByOSePQ7gdonnoVnvF8Yr/V0V39/Gl8aksnCNbL+vCNynPIxpqTYVnsfQ1FiUXD77Hw+KoUxaGF4OJ4G7+PsrqYUCzsj/MmWXLD8Hy4UF98VkT/PRY7SCApfg3U5tcA6+E50nOcV/xJkHnOzaAsWGjcbZBoVoS4IPG9tFg6TfdxSVaK4UVM8eXTLWPCfX8B2Zzi/hFsXsiTn6Ys7zkZkJW9CjxUrExIR1ECtI2VxYpQlkVjYS49G0fE532QkJs8ZQI86Ymwbp8Xl5WtbQxVVfVSiiceyrpLjJ6Viii+zyiL0Rcj4/NNxXPL8ozkEl9/sqaKAh7IyheJ8OT4Pe7eEJ8V4VWysnEghvIbLcvnnHKDWJonjA9SpCyfC8nCdYa2MHbsP5EpooB+WTHx7DnuOl6Y8Jo4uF0s3kyy6LmfryOPx7ykLByb+nRjynYsOLZLQeFZ3Zzlevh4/JQ9wVhRwOA/GP+DTtjmb0V/ByaLyE7/EjFZHfGV9+TfnndhshRhshRhshRhshRhshRhshRhshRhshRhshRhshRReVPdVWo0lkU8WXYt/XLuFykHnu/ooEquAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'COM Certificado Digital'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/restritoSemCert/home.jsf" DesignTimeRectangle="619, 421, 134, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'COM Certificado Digital'" FullSelectorArgument="&lt;webctrl parentid='f' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='f' tag='A' type='' class='' aaname='COM Certificado Digital' check:innerText='COM Certificado Digital' /&gt;" Guid="f8fe3790-be7d-408d-a599-5a4c6105deff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIoAAAASCAYAAACEskZKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALjSURBVGhD7Vc7bmMxDNwT5Ex7DxfpfRUXLnMBVwbSuMkBUhk5QI6QADmEVhRJ8SPqWX7PWwTQAER2RYkaDkcPyZ80MTGAaZSJIUyjTAxhGmViCI1RrseX9PRXYvf6QxnGZzqoPMThg1IZ36+ncF3qntL5ixYd9NkSx0/KrMDXe9rxefh3rld7of+XO/bv6a1wu6QrZrfj41Jq6/7H0GoLYWZwR23UXPWVz7bzbNGcy1BG+UnnvdvAgjrBzQCJOBMww677uDZEbBQkp3MkWh7kN62Mg852jMYc7x/kILYaZUHf1fCPZQHLRhloLioA0Os8hN0+/+QhM0lYi4wy2IQxoTIQ338oP1/S8zPt4X26PvXJAWtNX2ZPYF4ONVDN7XBstTTcAw0RscENPzenpXvlXMwb8xzCqdEjoxolSlrQZcELR7IoKBNH0nrtks5qn4Y+34URyArKDctgnODOiJVjI2gG7cUcfQmpZ9gX1qAzPT62P1vTIjaKOa91uHFv1Fd9jFCHOYR1thrFNVGgyIuAuL++2EzqagQTWCFjeH5ckwdoua83CuYGdKCQnhV/Y+rAGCavcZ9RfB++rtHFG4WAeygeapTgJehGhDwJlL8sbJhGUEJvXaB/x9GBfFvu643S10E4lHPNwHpGCYb/UKP07nW9dDTAu+y9kQb/7XcUaQRyncYYHbdr9AcY5dYbZZhjMzClndFy+xfF9Dd8rztn+HtO9xilvhi1gYp7wXXTTDYcAhG/OYQMJKdzRJ7vMiLcamy9Ufxeyema7uvidMIzUt/2HRinwvEGOD5GB3Ov45Qx1pfoYflrPY1RENxkDU26gJpRwcQAdgi0l0RZMgqgEuZwYpq8ykWNSR953YlkOQbnq8EhhK+9/xQOEOLmXz2hSQCtthD1DoB5MLZu/68egBip3M8mK5F7UeaN9GyMMvGLED6A/kPcgmmUXw75cmKYr88DMY0yMYRplIkhTKNMDCClf5w25+fYU+cQAAAAAElFTkSuQmCC" InformativeScreenshot="9b64bca64853a09c0804eb0b70350aec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Empregador Web' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="620, 443, 132, 14" ElementType="Text" FriendlyName="'SEM Certificado Digital'" FullSelectorArgument="&lt;webctrl aaname='SEM Certificado Digital' parentid='f' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='SEM Certificado Digital' parentid='f' tag='A' type='' class='' check:innerText='SEM Certificado Digital' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAASCAYAAACAR5Z3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALaSURBVGhD7VexbWsxDPwTZKa/h4v0XsWFyyzgykAaNxkglZEBMkICZAhFeiQlHkXp6dluAugAwvCTRB6P9wT7X5iY6GAaZKKLaZCJLqZBJrqoDPL9egpP/184TuH8xQtf72GXn+u4hGtc1ucOH3Qk4XqUfSqXAdaMcfzklRuQeMp55rx7/YHvS439e3hbuBH/h+DjsuTW/Y/hMxyEl4rMO2FDbtJc9RXPQq4GqnMRaBAWkEgw6Sjkt1prFYIh5wH/hPOenzUMQqT0mqm7CXy2YTDhuH2Ag7jXIJo35xoZbBcrc9NYNwiTcgUeNMhuHz+tqdIzzyCD5MF8yjjS0GH5fAnPz7xH9un80htHeua9aWWPY1oJpY/mdjjWBgHuRvwC39jAz5ivV7ec83nTukThVOkR4RskhX2DBw1CZElcenYJ5+WzNgitO8bRAGFQSGm0DMQIbThnjpWQEbyX1vjmYw3SPjcHn2nxwf4wJ8I3CJzXOqzU9frKc0t5hIObp2eQCCkmIUVzMhucvAhHzeY3NJK5glAFKKAPS1pyyuCwodsNQmsoDoJzc6QcFX8ws2MIWNfYZhDbh80LuliDMGgPxxaDLOCCFP1CgkKahYk3iRilEpLRel6gf8PoIE6PNIgnDqFwWM5Vg2oZxBm6GWTBLQZp1TW9NDSgWlh33CAMOsBEhg2iSMB3xwgrORPag/PWbjfIMMdqUCUfDur+GwT6G65rzgF/y2mjQWhDEaldqAaQZsKr4kfYmpm0NAHNrzV0u0Hs3rKmc5rbhM8gn5If+3YMk2F4J1i9tQ5Q13CKGOur6IH8tZ7VDVKKUajBCakqaA+Kj0PuGSQhE5UwIsK6WvMakiEtz404yNE5n42dovDF+id3cClW/8W45khgvUzkGgnwomDe9r+YBDXTVB/mGHtRph0wyMSfgGv89gt4D6ZB/ijKTUkBt80DMQ0y0cU0yEQX0yATHYTwC2N2V+71rftdAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NCheckState DisplayName="Check App State 'list'" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,290" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1058, 323, 79, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="77848780-2804-4dff-ac71-70a782cb3522" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAkCAYAAAD1lQZ5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVGhD7Zq/SwJhGMf7UzzUIUExGg4CA6EfYCBotEWSYEMUgkWg3HBhXHBLQwZBNLiJDi6N/gFJi5Nbm5O1uLV9e9/Ls7O7LOxF3+AZPnDv+z53w4f3eZ4bnoXFUBiEGEimQMZkbmwf4qTyiIvGC8yHN+IbuB/uifty+hvJ3Nw59nyRmAz35pJ5evPkGUxMhntzySw3Xj2Diclwby6ZXoHE7yCZAiGZAiGZAiGZAiGZAiGZApFQ5gDFcx1xdQk+JQB/JI0trYPy6LyNJNuPab3huou9OIvbbcEYxcwH6WSe5dfhC6aRMrvQ6z0Ur+4QDwUQ3W8PZTllDlDIsXhVR6Hp/taskUtmvYm4sork1WB8/7aCsJLGXpWvP2Ua1zqiSgZZa3/+SCXTMEvsVrJb5jprIxUMYM3oW8+WzJMaksshJvX5S+z8kEqmrmXgS9Sgu856yCbs1P6Q6Q+G4IuUkJcgvW2kklk2jtjNvPz2Zm6ZPP3tNG9J03hspJJpVqtQPWomr41h5QC5Ol87GlC1hpgiT6rLJdPuzs5ublawwrt5vjOMcchka42VBj9vTvdfvzV7JJPJ6eNMK0GNsJrIa6P1n9l1pPK4TF5PcwkWK8HvkYQy/y8kUyAkUyAkUyAkUyAkUyAkUyAkUyAumTSEMB2eQwg0HjMdnuMxNLg1HZ6DWxwaKfwdP44UEn+HZAojjHeWYutk93j1gQAAAABJRU5ErkJggg==" InformativeScreenshot="cec9681ce7819178cdf68cb6893bc3e4.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Empregador Web - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1145, 323, 79, 32" ElementType="Button" FriendlyName="'Cancelar'" FullSelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl name='Cancelar' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl name='Cancelar' role='push button' automationid='' check:fulltext='Cancelar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAkCAYAAAD1lQZ5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANBSURBVGhD7Zq/SyNBFMfv30kuP7x4mwRzFw0RFYkQCBaChxAwiIJgTghGwi2YHEG0SCFICgXhsEghhCus7FJZ2aVKZWdlZ/e993Z31t27jT9nC70pPrAz82Y2+9k3b1PMh0AwDIUclEyJuGR+DEUxqiWQTE3gy0RWMQT2w57Yl9OfLTMYGkFiLI0YBYXCn1xBCjfshz0lxr4i4BBqyxzVkkaAaCseJ/Y5YXgTbVsmp67KyOcRCo+Qt3G7bcvkWiCuFU/H6U3JfCVKpkSUTIkomRJRMiWiZErER5lT0L71sNm5w+5vk9r+MaKesT6w2qd73qCY8xjzCZ9kTiGtX5sCW+eYzJWRLl2hdtpDyjPeB96NzHgXmyyy3nD1xxYOkXS0feW9yIxWBvQgA+Qj3uMaZWn1TGz/W2xuW9ItASv1PnRrrCLGKNuTNC7m/aQsz3B/6hjF9u39WvoeQo61DJnZDtZORMwd9PYF0sZva6B4Sn1HfaxzOTroWPd6Gb7ITNVvsPvAlo7mD5FOFeiaBBnloI9ZHjMEUEY3f0GLlzHbYgHWWPEKOyyrsocYjeXbV5gLbmHxhHeAKTA0f4kaxSzPi7UsmfEGMvMlU/JMD1W6x3qJroXMM3rx41Ou3/gSfJGpbTsEeTHTxXL7BjsdkS19EkP9TgF2+xqL2TCmWxR3cgFNrJFrIJXrkTye72Zj9a+1Ij+Qbw5Qpfv9dMYIma/MSIEvMgOUIbxNN1ZLHuPHWKGtWmseIspbzXjoh2Sa7dkDeuijc/e/AUvmWtHRJ3DMndynl3Z6iUycs6+DjTclM7hED89ZRzWv2UE6W0ZqgbJx/5w+QObDVLbLCMS2UGhzpjwuM/qd67DY5ktIV7qYDO5hmWsd108WRetNN3uOkmHOnbNehBYpQKN1ODvfkEwiUsZ0fQDd8aGptjq0Tc2/TcZ2O7vGEsU8RWYgWEBGv1/P/gBRyVhnIeIeB12zVjvn5qlOWvOqeu+tZeb/iZIpESVTIkqmRJRMiSiZElEyJaJkSsRTpjqE8HyGHkJQx2Oez9DjMfbBLQpg46Jf8S/shz0NPbjFBEMRIzs5dbkWKLxhP+yJfTn9uWQqXoeSKY0w/gC6HbpLkB5DsQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,114" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="713, 174, 510, 124" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'list'" FullSelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl role='list' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl role='list' automationid='' /&gt;" Guid="81807487-f208-4d91-8467-dcbcebb2c618" ImageBase64="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" InformativeScreenshot="bafe09cbcf7649e0b88d17aae4a5fd04.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Empregador Web - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="712, 323, 179, 32" ElementType="Button" FriendlyName="'Informações do'" FullSelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl name='Informações do certificado' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Selecione um certificado' role='dialog' /&gt;&lt;ctrl name='Informações do certificado' role='push button' automationid='' check:fulltext='Informações do certificado' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Usuário'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Text="[strUsuario]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/restrito/login.jsf" DesignTimeRectangle="659, 437, 116, 18" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT f:txtLogin'" FullSelectorArgument="&lt;webctrl id='f:txtLogin' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='f:txtLogin' tag='INPUT' type='text' class='login' aaname=' Usuário' /&gt;" Guid="9624a6eb-40fa-4b3a-bb81-c960f6160301" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAWCAYAAAALmlj4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVGhD7dqxCQAxDARB9V+0/fDgwIEbGHbgKliUaXYoa61/R4Exz8Az06AdV+AYCowrMK7AuALjCowrMK7AuALjCowrMK7AuALjCowrMK7AuGfg5uzobDH9ZOHuwHt/6OQD+2vKbaoAAAAASUVORK5CYII=" InformativeScreenshot="883e58c39e1061f4aa288c9081b16a00.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Empregador Web' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="603, 439, 53, 14" ElementType="Text" FriendlyName="'Usuário'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname=' Usuário' check:innerText='Usuário' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAASCAYAAADhc3ZwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVFhH7ZRdbsMgDIA5I1IuFHGV9AJ93Ht6kD7kbVdwAdtQAzVE3aYtyyehtPzYfODEwD/glDwKv0/yvoA1Buxlo4732SW5XSwYY2G5U4en1fcOMd680r8262x8Tgf6rEySNP70QtP4CcnvQEjC54cqOiRJ5caH5m6yP5XhzTXHeV2ax+tmh+PTAtfqJldwrbVEJamJ9iU3WCbcSEgjykqVxHUsjOsoJstTzIAsVxLkEi8Pz9OUfCU6LFlsKtK7yYC4TSn5fDtCsoojDzrwxZIeSpoaJ1MludwwjojZkaz3NCgZf7eIG+tIJvJ7EjeoSRa3sUeyXDskGZ+voIT5E18G1N4POYYbpTEhIm+1K6nmRISkKshQkNw4GcEHwS0dCN8Q9jv/tYxP2gxLh2YnnFcfACIlA7lqnmMyA1Z/n1PyKJySxwDgAds9IaREIbrSAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Senha'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_4" IsPassword="True" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" SecureText="[strSenha]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/restrito/login.jsf" DesignTimeRectangle="659, 459, 116, 18" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT f:txtSenha'" FullSelectorArgument="&lt;webctrl id='f:txtSenha' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='f:txtSenha' tag='INPUT' type='password' class='' aaname=' Senha' /&gt;" Guid="673733ec-003e-441d-866f-0d84e96d058d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAWCAYAAAALmlj4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABgSURBVGhD7dqxCQAxDARB9V+0/fDgwIEbGHbgKliUaXYoa61/R4Exz8Az06AdV+AYCowrMK7AuALjCowrMK7AuALjCowrMK7AuALjCowrMK7AuGfg5uzobDH9ZOHuwHt/6OQD+2vKbaoAAAAASUVORK5CYII=" InformativeScreenshot="4c3a04f9da103789baaccb868920b889.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Empregador Web' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="603, 461, 44, 14" ElementType="Text" FriendlyName="'Senha'" FullSelectorArgument="&lt;webctrl aaname=' Senha' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Senha' tag='LABEL' type='' class='' check:innerText='Senha' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAASCAYAAAAdZl26AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEhSURBVEhL7ZRRDoMgDIY5I4kXMlwFL7F3PYgPvu0KndK/WJDo1CXGzD8hGbS0/VqcoZvrAbha/wgwkK8MGYNV+fHknNp6iuWoxX6PIoAUtKWhsXOyzoU7tjmH8DMAer82ITiZIdfhIFE6nRkM5+O0PO7rggXARZsl38M4iptWti0AtiAEYFp555NOYjoMKmBI3nuy6n7alJbcFL8GXvAVWNjUsy0CrEMgSFxZcEmMPRcpAGVfBpDOztPS7UmmcA6ApScRCkFX45m2LYoqAQhc5otJ8n4JVwQIv78SCgkB8wloHQdYhRu1AFgvXhes9qVCSt/AAQB+OnheyTRYCcB68VD+VFSwmBy20r/QXoDoG5YlG+KLrwK4qx6Aq/UAXCuiD7Ej3sMwH8quAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Enviar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dca763e9-b5cb-41b0-8f74-049cba15f6dd" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/restrito/login.jsf" DesignTimeRectangle="640, 489, 41, 18" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Enviar'" FullSelectorArgument="&lt;webctrl id='f:enviarLogin' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='f:enviarLogin' tag='INPUT' type='submit' class='botao_SD' aaname='Enviar' check:text='Enviar' /&gt;" Guid="35c08fe8-efb0-4da0-8b97-5011612fa56a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAWCAYAAABUpxX0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEaSURBVFhH7ZM7DoMwDIZ7yJ6jB+htuAAjGzsSIxsSGwNiRjC6edjlN4UKEKhQ8UtWm/iRL3a40Ql1buj743loQ13QexrqT6DDghre06ophiKLLaldlTIZ8c0w1CR0k0cq6deGWg4tHcv7iUhsXNlVP5Eg78y6oyyEPO6094k4ButX/peq1O2jVkNLMQXqfAIQUdaaZVtQAHkO2p0hl0uptI5BnNQXQ81/01KEi8qlVDcZwPmGl0doPkt1e+xyHGcNtf55qDH343WdNwDxYF/l8X8P+mUids2G2hza+ztqEGSQp9/+EaDljRqpGpCncnh/E+hP6UOmoaWTek/n9RezcW4q6mNeCn1QQ13Qexrqgt7TUG/oM+mE0EQvuER+NUQssk0AAAAASUVORK5CYII=" InformativeScreenshot="bd957d7538208d6ff47e57c64102fa4c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Empregador Web' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="688, 489, 44, 18" ElementType="InputBox" FriendlyName="'Limpar'" FullSelectorArgument="&lt;webctrl id='limpar' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='limpar' tag='INPUT' type='reset' class='botao_SD' aaname='Limpa os campos da tela' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAYAAACG9x+sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD6SURBVFhH7ZM7DoMwEERzyJwjB8htuAAlHb0lSjokOgpEjaDc+DfYQEIUnMQ24kkjxVnPescWF4qc4wS43u5RCZwBfAkcMEBaU8/XfZXNDG9rfxb4LEBAAg4vkFE58MVQU9mKDoKRSqb2SNpi7ms7U+O+ZOpdUKP/lrzyWR7gHkAMnZoaUUc535tUo1w1zKphANbJGs7I+QXg96bPEvjKC6jm+hZxe3pIexDTc+m1/JrnPiMQQAC8pN676TMC/gMsayEHwPeBmupj+xav4RJghTjAMUBf1WqPAPu48OFKhtGcsSvAL7QxyF6BM4AvgTOAL4EpQKxEHoDoAaioKSvKIpWNAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="50df5f6c1d63ad49ad63e37cf813c7fc.jpg" Selector="&lt;html app='chrome.exe' title='Empregador Web' /&gt;" Url="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/login.jsf;jsessionid=ZMr3DLEUby0AL2uTB919WNJ8.slave22:mte-sd" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+    <uix:NCheckState DisplayName="Check App State 'Selecionar Empresa'" sap:VirtualizedContainerService.HintSize="400,61" sap2010:WorkflowViewState.IdRef="NCheckState_4" Version="V1">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Logou no site Empregador Web usando Certificado Digital&quot;]" />
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,225" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Não conseguiu logar no site usando Certificado Digital&quot;]" />
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable BrowserURL="https://sd.maisemprego.mte.gov.br/sdweb/empregadorweb/restrito/login.jsf" DesignTimeRectangle="576, 330, 768, 29" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Selecionar Empresa'" FullSelectorArgument="&lt;webctrl parentid='conteudo' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='conteudo' tag='H1' type='' class='h1TituloPrincipal' aaname='Selecionar Empresa' check:innerText='Selecionar Empresa' /&gt;" Guid="c2344027-61ef-41d2-b316-e1e93ff7e15b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAwQAAAAhCAYAAABncmz6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOtSURBVHhe7dzbbRs7FAXQuILUdGsQ4IIM9XArUPrwT1JIPlzGxOMhh8NDjh55GIK4FnCA2NS8+LW3JOfL1//+n4wxxhhjjDFjjkJgjDHGGGPMwPNlAgAAhqUQAADAwBQCAAAYmEIAAAADUwgAAGBgCgEAAAxMIQAAgIEpBAAAMDCFAAAABqYQAADAwBQCAAAYmEIAAAADUwgAAGBgTSF4+3aYnp6e1jl8e0srl+Vjbzlm3/fp+HEPx/d/3ZfvL2V/mnk+TX/j6QEA4DPUheDHsRtyrw34f7cQ3C+FAACAR1EVghx0jz/SL3JB2Ibcn6fpsAnA2/DfKwT1Jw6H6fQzLST76/1PCOowXp+vXP+Ujm1f05aezfnzsz0fp+Pzst4rN80+dayveb+Xdb9eliuVZ+g/72m7J+mY2fp8L8d0znx8PrY9ZlbvcVx/m07pWfM8eqEDAKCoCkEJjjtf0wllIE8OxiWQL4GyCaIfU87dX48ht7y+LgNl4vWbyYVm5/7XgNyshzKR3FII4hyewz2uZSuE+s3s7ufHsf3j1lB/4VOf/n32nxsAgMdTf2WoF5g771CXIJzCaAq1eX0Jm/md5025SOF0Wc9BtoTP+vhQCNZ7a88Xr98WgM0xW3m9ef35QLwX9udpgnbavxLm956nBPt1fy8936za01nY92b9vGvKDgAAj6P5o+JtMF0nBdD9ILyEz36g78wckmMYb9SFoD53Voff9jWdUvIh3FssBLv3tLilEDThfi1Y9fOtP1fXvvR85XftxE9ayvTCfjyPQgAAMIZOIdjIITaFy/0gvKzXgbUNouvMoffGQtB/p/vGQhCveennHde8i/7bhWD9efYnhSDcX362POk+4n1e82wAADyOTSHI4XP7dZn6dzl87oXFOrCGMN4ohaEfmkNAXgPt5nz59SnAXyoEzXo4/j4KQeeY3ed7l15T/e6s7XXjPeT9Ov9sAAA8jp0/Kg4TA3OcFHJjYN07Xw6b/fX4VZdSAHLIjhPPd6kQNPObhaA/y7X+pBDEiftZh/+d40KJaKYqXe0oBAAAY2i+MtQEyBiOYynYrPcCazxfHWbb9RJE20Iwq8P49tOM3vXjpxTlHfB8reV86Tx3UQiu+G9Hwx6WY/PUexb3uHq+fF/593kPNtcFAOBxnf8bAj5RvwABAMC/pBDcDYUAAIDPpxDcDYUAAIDPpxAAAMDAFAIAABjYWgheX1+NMcYYY4wxg0zmEwIAABiYQgAAAMOapl8Yx2SFJq0yrgAAAABJRU5ErkJggg==" InformativeScreenshot="d4ed6d1a3a0f783a7853b36a5bbe6815.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Selecionar Empresa' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+          <uix:TargetAnchorable.Anchors>
+            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+              <uix:Target DesignTimeRectangle="795, 432, 143, 21" FriendlyName="'Selecionar Inscrição'" FullSelectorArgument="&lt;webctrl id='f:tipoPesquisa' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='f:tipoPesquisa' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname=' ' check:innerText='Selecionar Inscrição' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJMAAAAZCAYAAAA1zhyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANOSURBVGhD7VlLkuIwDJ1cMMVtqOpiwwG4AGzYsOAI9BEolr3gFCy4gAfFfokky0kg0D3TSFWvINGzrc+LHbr/BDe3J5mLye1p1orpcrk4HA8B5mJyTAbMxeSYDJiLyTEZsLvEdDqdwna7DcvlMszn8+aTrum+xXe8B2CjxbTf78NqtQrH4zFcr9dmDH3SNd0nvzXO8fsBGyUmEsput0tM28jvgnpPwAbFREcY7TxjjHh+5P3H+FyEqqrC4vMSzps61JuzzVOADYqJ3onoKBtjxCO+NY/EOaxnVRN4g9k6nE0ew9c61Dfu2ARNsGKZ/m/A4YNyXoSD4XsNUq1H1JgEBCFVVR3WXzZPAzYoJnrJxjvSkBGP+NY8HDHYVNDU4EGRPENM/wC+X0yvB2xQTPSr7R4jvjUPRyxoaYeQu1YrnkxMBR7jwteuk+1Mh7BgPD4Hmr5uhE/f5ZOKHCI6cWDcopCjEBPi2XTx8hjiQxfvZwJMYyO62PL1851JxM53LFW3UTW9AfYjOxNPRgTc+lSxKXAlpiIvCWQsr/o4NDzp62IsctEEFDn55LgcVjxybPKJfNX6yRfXkGLJ15d+cSqINSJP5p9Eqmqvj0HYD70zyR2hTU4XLV03SfQVl/OaBhXOey4YJR67KZgnf7oJaFwDSxAGhD/FYDYp5cv9gBCEQr4+jz19b+tmgK2LWLR4dP1hg2J65a+5rBkiEdvHhWXx8sQZmIByniUmNEX64ti4ni7sI2KCoHVMoj43QFR9a+Q+Hrt+CDmSzxBQPueDYiK89u9MKbChZLmY+njZjlPwZbyxYpK8V4qpReJZjRa8G/rFpGNn6IklX2+CmAgkFNp56CjDOxR90jXdHy8kLh52bTWDJyjE1NcUOZ8oRA9PF1M2pSy0OH83T95MiXLcfbGqcT21yNeXsUthsBpYDyt4aj0tLthoMRHoCKN3InrJnvS/uRRc0wSCeFJS8smHBHRCRR7jwoeG6AZ1RVO8G2RT1BMt5q9DXRAa5uIQ/j4xtddYR8aHsRHdmCExdZyEwv16Ftdu11Q5Yz0C7C4xOX4LugdRPIQPAuZiemM0Ox+O+QmAuZjeEeyIFEfng4C5mByTAWvF5OY21VxMbk+yEP4CcJbjFX07d9oAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+            </scg:List>
+          </uix:TargetAnchorable.Anchors>
+        </uix:TargetAnchorable>
+      </uix:NCheckState.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NCheckState>
+  </Sequence>
+</Activity>
